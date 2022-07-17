@@ -1,0 +1,72 @@
+.table {
+border-collapse: collapse;
+border: 3px solid rgb(100,130,140);
+width 75%;
+background: Beige;
+width: center;
+}
+tbody {
+    font-size: 90%;
+    font-style: 75%;
+    letter-spacing: 1px;
+}
+tfoot {
+    font-weight: bold;
+    font-size: 75%
+}
+thead {
+    color : darkblue;
+    text-align: center;
+}
+td {
+ text-align: center;
+ border: 1px solid rgb(100,130,140);
+ }
+
+.form {
+border-collapse: collapse;
+border: 3px solid rgb(100,130,140);
+width 75%;
+background: Beige;
+}
+tbody {
+    font-size: 90%;
+    font-style: 75%;
+    letter-spacing: 1px;
+
+}
+tfoot {
+    font-weight: bold;
+    font-size: 75%
+}
+thead {
+    color : darkblue;
+    text-align: center;
+margin: 1em 0;
+font-size: 1.0em;
+display: fixed;
+/*font-size: 0.75em; /*TAMANHO DO FORMULARIO*/
+input {
+width: 100px;
+}
+
+}
+td {
+ text-align: center;
+ border: 1px solid rgb(100,130,140);
+
+ }
+th {
+ text-align: center;
+  border: 1px solid rgb(100,130,140);
+}
+form-group{
+
+  border: 10px solid rgb(100,130,140);
+
+}
+
+
+
+
+

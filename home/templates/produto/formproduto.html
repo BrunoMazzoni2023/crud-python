@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block conteudo %}
+{% load static %}
+ {% include 'parciais/_messages.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crud com Python</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
+
+</head>
+<body>
+
+
+
+
+<div class="col-8 m-auto pt-2 pb-2 text-center">
+    <h1>Cadastro  Produtos</h1>
+</div>
+<div class="col-8 m-auto pt-2 pb-2  text-center">
+    <a href="/principal" class="btn btn-primary">Palma</a>
+</div>
+
+<div class="col-8 m-auto pt-2 pb-2  text-center">
+    <a href="/" class="btn btn-info">Inicio</a>
+</div>
+
+<div class="col-8 m-auto pt-2 pb-2  text-center">
+    <a href="/homeproduto" class="btn btn-secondary">Voltar</a>
+</div>
+
+<div class="col-8 m-auto pt-3 pb-2  text-center"></div>
+    <div id="result"></div>
+             <!--{{form.as_p}}-->
+    <div class="col-8 m-auto pt-4 pt-2 text-center"></div>
+        <form method="POST" name="formproduto" id="formproduto" action="{% if db %}/updateproduto/{{db.id}}/{%else%}/createproduto/{% endif %}" method="post">
+ {% include 'parciais/_messages.html' %}
+            {% csrf_token %}
+
+ <div class="form-group">
+      <label> Nome</label>
+      <input type="text" name="nome" value="{{request.POST.nome}}{{db.nome}}" class="form-control">
+  </div>
+
+
+     <div class="form-group">
+      <label> Carro</label>
+      <input type="text" name="carro" value="{{request.POST.carro}}{{db.carro}}" class="form-control">
+  </div>
+
+     <div class="form-group">
+      <label> Ano</label>
+      <input type="text" name="ano" value="{{request.POST.ano}}{{db.ano}}" class="form-control">
+  </div>
+
+    <div class="form-group">
+      <label> Lado</label>
+      <input type="text" name="lado" value="{{request.POST.lado}}{{db.lado}}" class="form-control">
+  </div>
+
+ <div class="form-group">
+      <label> Obs</label>
+      <input type="textfield" name="obs" value="{{request.POST.obs}}{{db.obs}}" class="form-control">
+  </div>
+
+
+
+
+ <button type="submit" class="btn btn-primary">Cadastrar-me</button>
+<input type="submit" class="btn btn-success" value="Salvar">
+
+</form>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+<script src="{% static 'javascript.js' %}"></script>
+
+<script>
+
+$(document).ready(function() {
+     $('#id_produtoform').select2();
+});
+
+</script>
+{% endblock %}
+ </body>
+</html>
+
